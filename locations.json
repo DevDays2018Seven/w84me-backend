@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "Knebel Hartmut Dipl.-Med. u. Nyari Regina Dipl.-Med.",
+        "description": "Ärzte: Allgemeinmedizin und Praktische Ärzte",
+        "address": "Moritzstr. 7, 39124 Magdeburg-Neue Neustadt",
+        "lat": "52.154955",
+        "lon": "11.6326681"
+    },
+    {
+        "id": 2,
+        "name": "Rother J. Dr.med.",
+        "description": "Ärzte: Allgemeinmedizin und Praktische Ärzte",
+        "address": "Breiter Weg 122, 39104 Magdeburg-Altstadt",
+        "lat": "52.1341733",
+        "lon": "11.6352713"
+    },
+    {
+        "id": 3,
+        "name": "Hempel Christina",
+        "description": "Ärzte: Allgemeinmedizin und Praktische Ärzte",
+        "address": "Tränsberg 21, 39104 Magdeburg-Altstadt",
+        "lat": "52.1366518",
+        "lon": "11.6450523"
+    },
+    {
+        "id": 4,
+        "name": "Günther Olaf",
+        "description": "Ärzte: Allgemeinmedizin und Praktische Ärzte",
+        "address": "Kroatenweg 72, 39116 Magdeburg-Sudenburg",
+        "lat": "52.1069869",
+        "lon": "11.5887874"
+    },
+    {
+        "id": 5,
+        "name": "Schäfer Markus Dr. med.",
+        "description": "Ärzte: Allgemeinmedizin und Praktische Ärzte",
+        "address": "Hopfenplatz 5, 39120 Magdeburg-Hopfengarten",
+        "lat": "52.0911495",
+        "lon": "11.6242963"
+    },
+    {
+        "id": 6,
+        "name": "Hülsemann Claudia C. Dr.med.",
+        "description": "Ärzte: Allgemeinmedizin und Praktische Ärzte",
+        "address": "Schöppensteg 9, 39124 Magdeburg-Neue Neustadt",
+        "lat": "52.1636642",
+        "lon": "11.6448774"
+    },
+    {
+        "id": 7,
+        "name": "Krumbein Margarita Dipl.-Med.",
+        "description": "Ärzte: Allgemeinmedizin und Praktische Ärzte",
+        "address": "Gareisstr. 13, 39106 Magdeburg-Alte Neustadt",
+        "lat": "52.1399966",
+        "lon": "11.6372327"
+    },
+    {
+        "id": 8,
+        "name": "Neumann Detlef Dipl.-Med.",
+        "description": "Ärzte: Allgemeinmedizin und Praktische Ärzte",
+        "address": "Uchtdorfer Weg 26, 39128 Magdeburg-Neustädter Feld",
+        "lat": "52.1644858",
+        "lon": "11.6180301"
+    },
+    {
+        "id": 9,
+        "name": "Sohst Uta Dipl.-Med.",
+        "description": "Ärzte: Allgemeinmedizin und Praktische Ärzte",
+        "address": "Leiterstr. 5, 39104 Magdeburg-Altstadt",
+        "lat": "52.1280063",
+        "lon": "11.6313572"
+    },
+    {
+        "id": 10,
+        "name": "Ferchland Hans-Peter Dr.med.",
+        "description": "Ärzte: Allgemeinmedizin und Praktische Ärzte",
+        "address": "Lindenplan 30, 39120 Magdeburg-Hopfengarten",
+        "lat": "52.0926022",
+        "lon": "11.6208976"
+    }            
+]
