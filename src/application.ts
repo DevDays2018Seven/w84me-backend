@@ -7,13 +7,14 @@ import { IdGenerator } from "./services/id-generator-service";
 import { LocationStore } from "./services/location-store-service";
 
 import { LoggerMiddleware } from "./middleware/logger-middleware";
+import { SessionStore } from "./services/session-store-service";
+import { EstimatesService } from "./services/estimates-service";
 import TYPES from "./constant/types";
 
 // Controllers
 import "./controllers/locations-controller";
-import "./controllers/sessions-controller"
-import { SessionStore } from "./services/session-store-service";
-import { EstimatesService } from "./services/estimates-service";
+import "./controllers/sessions-controller";
+import "./controllers/estimates-controller";
 
 // InversifyJS Container
 const container = new Container();
