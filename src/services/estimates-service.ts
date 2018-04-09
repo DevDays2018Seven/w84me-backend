@@ -30,10 +30,6 @@ export class EstimatesService {
                 const dateEnd = new Date(session.timestampEnd);
                 const dateNow = new Date();
 
-                console.log("dateStart:", dateStart.getHours());
-                console.log("dateNow:", dateNow.getHours());
-                console.log("dateEnd:", dateEnd.getHours());
-
                 if (dateNow.getDay() == dateStart.getDay() &&
                     dateNow.getHours() >= dateStart.getHours() &&
                     dateNow.getHours() <= dateEnd.getHours()) {
