@@ -11,6 +11,8 @@ import TYPES from "./constant/types";
 
 // Controllers
 import "./controllers/locations-controller";
+import "./controllers/sessions-controller"
+import { SessionStore } from "./services/session-store-service";
 
 // InversifyJS Container
 const container = new Container();
@@ -18,6 +20,7 @@ const container = new Container();
 // Services
 container.bind<IdGenerator>(TYPES.IdGenerator).to(IdGenerator).inSingletonScope();
 container.bind<LocationStore>(TYPES.LocationStore).to(LocationStore).inSingletonScope();
+container.bind<SessionStore>(TYPES.SessionStore).to(SessionStore).inSingletonScope();
 
 // Middleware
 container.bind<LoggerMiddleware>(TYPES.LoggerMiddleware).to(LoggerMiddleware);
