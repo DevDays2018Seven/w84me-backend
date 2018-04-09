@@ -21,7 +21,7 @@ export class SessionStore {
         for (let i = 1; i < 1000; i++) {
             const locationId = 1; // Math.floor(Math.random() * 10) + 1;
             const sessionStart = this.randomDate(new Date(2018, 2, 1), new Date(2018, 3, 1)).getTime();
-            const sessionEnd = sessionStart + Math.floor(Math.random() * 3600);
+            const sessionEnd = sessionStart + Math.floor(Math.random() * 3600000);
 
 
             this.addSession(new Session(generatedSessionId, locationId, sessionStart, sessionEnd));
@@ -33,7 +33,7 @@ export class SessionStore {
 
         for (let i = 1; i < 10; i++) {
             const locationId = 1; // Math.floor(Math.random() * 10) + 1;
-            const sessionStart = this.randomDate(today, today).getTime() - + Math.floor(Math.random() * 60);
+            const sessionStart = this.randomDate(today, today).getTime() - + Math.floor(Math.random() * 3600000);
 
             this.addSession(new Session(generatedSessionId, locationId, sessionStart));
             generatedSessionId = this.idGenerator.generateSessionId();
