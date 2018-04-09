@@ -5,8 +5,8 @@ export class Location {
         public name: string,
         public description: string,
         public address: string,
-        public latitude: string,
-        public longitude: string
+        public latitude: number,
+        public longitude: number
     ) {}
 
     public static fromJson(json: any): Location {
