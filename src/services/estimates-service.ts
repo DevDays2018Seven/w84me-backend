@@ -1,9 +1,8 @@
 import { injectable, inject } from "inversify";
 
-import { Estimation } from "../models/estimation";
-import { readFileSync } from "fs";
-import { SessionStore } from "./session-store-service";
 import TYPES from "../constant/types";
+import { Estimation } from "../models/estimation";
+import { SessionStore } from "./session-store-service";
 
 @injectable()
 export class EstimatesService {

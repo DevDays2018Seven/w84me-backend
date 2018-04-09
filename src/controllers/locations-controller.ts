@@ -2,10 +2,10 @@ import * as e from "express";
 import { controller, httpGet, response } from "inversify-express-utils";
 import { inject } from "inversify";
 
+import TYPES from "../constant/types";
 import { IdGenerator } from "../services/id-generator-service";
 import { LocationStore } from "../services/location-store-service";
 import { Location } from "../models/location";
-import TYPES from "../constant/types";
 
 @controller("/locations", TYPES.LoggerMiddleware)
 export class LocationsController {

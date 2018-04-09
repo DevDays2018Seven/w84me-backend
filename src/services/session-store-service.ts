@@ -1,8 +1,8 @@
 import { injectable, inject } from "inversify";
 
-import { Session } from "../models/session";
 import TYPES from "../constant/types";
-import { IdGenerator } from "../services/id-generator-service";
+import { Session } from "../models/session";
+import { IdGenerator } from "./id-generator-service";
 
 @injectable()
 export class SessionStore {
@@ -32,7 +32,7 @@ export class SessionStore {
         const today = new Date();
 
         for (let i = 1; i < 10; i++) {
-            const locationId = 1; // Math.floor(Math.random() * 10) + 1;
+            const locationId = Math.floor(Math.random() * 10) + 1;
             const sessionStart = this.randomDate(today, today).getTime() - + Math.floor(Math.random() * 3600000);
 
             this.addSession(new Session(generatedSessionId, locationId, sessionStart));
