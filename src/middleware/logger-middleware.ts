@@ -6,7 +6,7 @@ import { injectable } from "inversify";
 export class LoggerMiddleware extends BaseMiddleware {
 
     handler(req: e.Request, res: e.Response, next: e.NextFunction): void {
-        console.info(req.method, req.url);
+        console.info(req.method, req.url, req.body);
         next();
     }
 

@@ -14,7 +14,7 @@ export class LocationsController {
 
     @httpGet("/")
     private getLocations(
-        @response() res: e.Response,
+        @response() res: e.Response
     ): void {
         res.status(200).json(this.locationStore.getAllLocations());
     }
