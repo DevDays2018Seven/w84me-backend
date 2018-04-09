@@ -11,6 +11,10 @@ export class SessionStore {
         this.sessions = [];
     }
 
+    public seedSessions(): void {
+
+    }
+
     public addSession(session: Session): void {
         this.sessions.push(session);
     }

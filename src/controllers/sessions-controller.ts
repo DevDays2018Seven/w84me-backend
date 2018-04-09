@@ -73,4 +73,12 @@ export class SessionsController {
         }
     }
 
+    @httpPost("/seed")
+    private seedSessions(
+        @response() res: e.Response
+    ): void {
+        this.sessionStore.seedSessions();
+        res.status(204).end();
+    }
+
 }
