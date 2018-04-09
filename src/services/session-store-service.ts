@@ -18,7 +18,7 @@ export class SessionStore {
         let generatedSessionId = this.idGenerator.generateSessionId();
 
         // seed finished Sessions
-        for (let i = 1; i < 50; i++) {
+        for (let i = 1; i < 100; i++) {
             const locationId = 1; // Math.floor(Math.random() * 10) + 1;
             const sessionStart = this.randomDate(new Date(2018, 2, 1), new Date(2018, 3, 1)).getTime();
             const sessionEnd = sessionStart + Math.floor(Math.random() * 60);
@@ -31,7 +31,7 @@ export class SessionStore {
         // seed open Sessions
         const today = new Date();
 
-        for (let i = 1; i < 50; i++) {
+        for (let i = 1; i < 10; i++) {
             const locationId = 1; // Math.floor(Math.random() * 10) + 1;
             const sessionStart = this.randomDate(today, today).getTime() - + Math.floor(Math.random() * 60);
 
