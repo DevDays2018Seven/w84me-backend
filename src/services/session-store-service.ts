@@ -23,8 +23,8 @@ export class SessionStore {
             const sessionStart = this.randomDate(new Date(2018, 2, 1), new Date(2018, 3, 1)).getTime();
             const sessionEnd = sessionStart + Math.floor(Math.random() * 60);
 
-            this.addSession(new Session(generatedSessionId, locationId, sessionStart));
-            this.addSession(new Session(generatedSessionId, locationId, sessionEnd));
+
+            this.addSession(new Session(generatedSessionId, locationId, sessionStart, sessionEnd));
             generatedSessionId = this.idGenerator.generateSessionId();
         }
 
