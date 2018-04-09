@@ -1,5 +1,5 @@
 import * as e from "express";
-import { controller, httpGet, response, requestBody } from "inversify-express-utils";
+import { controller, httpGet, response, requestParam } from "inversify-express-utils";
 import { inject } from "inversify";
 
 import TYPES from "../constant/types";
@@ -13,17 +13,17 @@ export class EstimatesController {
     @inject(TYPES.LocationStore) private locationStore: LocationStore;
     @inject(TYPES.EstimatesService) private estimatesService: EstimatesService;
 
-    @httpGet("/")
+    @httpGet("/:locationId")
     private getEstimates(
-        @requestBody("locationId") locationId: number,
+        @requestParam("locationId") locationId: string,
         @response() res: e.Response
     ): void {
-        if (isNullOrUndefined(this.locationStore.findLocation(locationId))) {
+        if (isNullOrUndefined(this.locationStore.findLocation(Number(locationId)))) {
             res.status(400).end();
             return;
         }
 
-        res.status(200).json(this.estimatesService.calculateEstimates(locationId).toJson());
+        res.status(200).json(this.estimatesService.calculateEstimates(Number(locationId)).toJson());
     }
 
 }
