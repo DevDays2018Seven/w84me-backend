@@ -60,7 +60,11 @@ export class Location {
     public toJson(): any {
         return {
             id: this.id,
-            name: this.name
+            name: this.name,
+            description: this.description,
+            address: this.address,
+            latitude: this.latitude,
+            longitude: this.longitude
         }
     }
 
