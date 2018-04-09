@@ -21,7 +21,7 @@ export class SessionsController {
         @response() res: e.Response
     ): void {
         const sessions = this.sessionStore.getAllSessions().map((session: Session) => {
-            return session.toJson();
+            return session;
         });
 
         res.status(200).json(sessions);

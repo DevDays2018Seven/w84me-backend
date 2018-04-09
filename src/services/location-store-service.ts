@@ -15,7 +15,7 @@ export class LocationStore {
 
     public readLocationsFromStaticFile(path: string): Array<Location> {
         const locations = JSON.parse(readFileSync(path).toString());
-        const locationArray = new Array<Location>();
+        const locationArray: Array<Location> = [];
 
         for (let location of locations) {
             locationArray.push(Location.fromJson(location));

@@ -18,7 +18,7 @@ export class LocationsController {
         @response() res: e.Response
     ): void {
         const locations = this.locationStore.getAllLocations().map((location: Location) => {
-            return location.toJson();
+            return location;
         });
 
         res.status(200).json(locations);
