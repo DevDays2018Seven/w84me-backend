@@ -30,9 +30,13 @@ export class EstimatesService {
                 const dateEnd = new Date(session.timestampEnd);
                 const dateNow = new Date();
 
-                if (dateNow.getDay() === dateStart.getDay()
-                    && dateNow.getHours() >= dateStart.getHours()
-                    && dateNow.getHours() <= dateEnd.getHours()) {
+                console.log("dateStart:", dateStart.getHours());
+                console.log("dateNow:", dateNow.getHours());
+                console.log("dateEnd:", dateEnd.getHours());
+
+                if (dateNow.getDay() == dateStart.getDay() &&
+                    dateNow.getHours() >= dateStart.getHours() &&
+                    dateNow.getHours() <= dateEnd.getHours()) {
                     finishedSessions++;
                     totalWaitingTime += session.timestampEnd - session.timestampStart;
                 }
