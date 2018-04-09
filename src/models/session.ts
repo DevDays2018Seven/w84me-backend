@@ -4,7 +4,7 @@ export class Session {
         private _id: number,
         private _locationId: number,
         private _timestampStart: number,
-        private _timestampEnd: number
+        private _timestampEnd: number = null
     ) {}
 
     get id(): number {

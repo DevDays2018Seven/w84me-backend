@@ -13,6 +13,7 @@ import TYPES from "./constant/types";
 import "./controllers/locations-controller";
 import "./controllers/sessions-controller"
 import { SessionStore } from "./services/session-store-service";
+import { EstimatesService } from "./services/estimates-service";
 
 // InversifyJS Container
 const container = new Container();
@@ -21,6 +22,7 @@ const container = new Container();
 container.bind<IdGenerator>(TYPES.IdGenerator).to(IdGenerator).inSingletonScope();
 container.bind<LocationStore>(TYPES.LocationStore).to(LocationStore).inSingletonScope();
 container.bind<SessionStore>(TYPES.SessionStore).to(SessionStore).inSingletonScope();
+container.bind<EstimatesService>(TYPES.EstimatesService).to(EstimatesService).inSingletonScope();
 
 // Middleware
 container.bind<LoggerMiddleware>(TYPES.LoggerMiddleware).to(LoggerMiddleware);
