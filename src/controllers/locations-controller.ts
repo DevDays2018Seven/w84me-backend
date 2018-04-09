@@ -4,6 +4,7 @@ import { inject } from "inversify";
 
 import { IdGenerator } from "../services/id-generator-service";
 import { LocationStore } from "../services/location-store-service";
+import { Location } from "../models/location";
 import TYPES from "../constant/types";
 
 @controller("/locations", TYPES.LoggerMiddleware)
@@ -16,7 +17,11 @@ export class LocationsController {
     private getLocations(
         @response() res: e.Response
     ): void {
-        res.status(200).json(this.locationStore.getAllLocations());
+        const locations = this.locationStore.getAllLocations().map((location: Location) => {
+            return location.toJson();
+        });
+
+        res.status(200).json(locations);
     }
 
 }

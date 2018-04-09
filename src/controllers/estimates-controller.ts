@@ -23,7 +23,7 @@ export class EstimatesController {
             return;
         }
 
-        res.status(200).json(this.estimatesService.calculateEstimates(locationId));
+        res.status(200).json(this.estimatesService.calculateEstimates(locationId).toJson());
     }
 
 }

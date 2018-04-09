@@ -20,7 +20,11 @@ export class SessionsController {
     private getSessions(
         @response() res: e.Response
     ): void {
-        res.status(200).json(this.sessionStore.getAllSessions());
+        const sessions = this.sessionStore.getAllSessions().map((session: Session) => {
+            return session.toJson();
+        });
+
+        res.status(200).json(sessions);
     }
 
     @httpPost("/")
