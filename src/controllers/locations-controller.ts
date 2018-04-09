@@ -1,7 +1,7 @@
 import * as e from "express";
-import { controller, httpGet, queryParam, response } from "inversify-express-utils";
+import { controller, httpGet, httpPost, queryParam, requestBody, response } from "inversify-express-utils";
 import { inject } from "inversify";
-import { isNull } from "util";
+import { isNull, isNullOrUndefined } from "util";
 
 import TYPES from "../constant/types";
 import { IdGenerator } from "../services/id-generator-service";
@@ -38,6 +38,37 @@ export class LocationsController {
         }
 
         res.status(200).json(locations);
+    }
+
+    @httpPost("/")
+    private addLocation(
+        @requestBody() body: any,
+        @response() res: e.Response
+    ): void {
+        if (
+            isNullOrUndefined(body.name) ||
+            isNullOrUndefined(body.description) ||
+            isNullOrUndefined(body.address) ||
+            isNullOrUndefined(body.latitude) ||
+            isNullOrUndefined(body.longitude)
+        ) {
+            res.status(400).end();
+        } else {
+            const locationId = this.idGenerator.generateLocationId();
+
+            const location = new Location(
+                locationId,
+                body.name,
+                body.description,
+                body.address,
+                body.latitude,
+                body.longitude
+            );
+
+            this.locationStore.addLocation(location);
+
+            res.status(201).json({ locationId: locationId });
+        }
     }
 
 }

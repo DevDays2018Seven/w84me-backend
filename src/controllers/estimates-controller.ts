@@ -1,11 +1,11 @@
 import * as e from "express";
 import { controller, httpGet, response, requestParam } from "inversify-express-utils";
 import { inject } from "inversify";
+import { isNullOrUndefined } from "util";
 
 import TYPES from "../constant/types";
 import { EstimatesService } from "../services/estimates-service";
 import { LocationStore } from "../services/location-store-service";
-import { isNullOrUndefined } from "util";
 
 @controller("/estimates", TYPES.LoggerMiddleware)
 export class EstimatesController {

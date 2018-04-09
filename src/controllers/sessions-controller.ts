@@ -29,7 +29,7 @@ export class SessionsController {
 
     @httpPost("/")
     private reportSession(
-        @requestBody() body,
+        @requestBody() body: any,
         @response() res: e.Response
     ): void {
         console.log("SessionId", body.sessionId);
